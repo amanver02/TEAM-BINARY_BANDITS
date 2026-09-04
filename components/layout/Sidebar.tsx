@@ -10,6 +10,7 @@ import {
   BarChart3,
   Lightbulb,
   FileText,
+  Wallet,
   Settings,
   ChevronRight,
 } from 'lucide-react';
@@ -26,6 +27,11 @@ const navItems = [
     label: 'Projects',
     href: '/projects',
     icon: FolderKanban,
+  },
+  {
+    label: 'Budget Analysis',
+    href: '/budget',
+    icon: Wallet,
   },
   {
     label: 'Documents',
