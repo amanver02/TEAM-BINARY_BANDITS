@@ -243,7 +243,7 @@ export function GlobalSearch() {
         {/* Footer */}
         <div className="px-4 py-2 border-t border-slate-100 bg-slate-50 text-[11px] text-slate-400 flex items-center justify-between">
           <span>Press ESC to close</span>
-          <span>CSR360 Unified Search</span>
+          <span>CSR Flow Unified Search</span>
         </div>
       </div>
     </div>

@@ -4,13 +4,13 @@ import { AuthProvider } from '@/lib/firebase/auth-context';
 
 export const metadata: Metadata = {
   title: {
-    default: 'CSR360 — One Source of Truth',
-    template: '%s | CSR360',
+    default: 'CSR Flow — Plan • Track • Impact',
+    template: '%s | CSR Flow',
   },
   description:
-    'CSR360 is an enterprise platform for managing Corporate Social Responsibility projects, partners, budgets, milestones, and impact reporting in one place.',
-  keywords: ['CSR', 'Corporate Social Responsibility', 'Project Management', 'Impact Reporting'],
-  authors: [{ name: 'CSR360' }],
+    'CSR Flow is an enterprise platform for planning, tracking, and measuring the impact of Corporate Social Responsibility initiatives.',
+  keywords: ['CSR', 'CSR Flow', 'Corporate Social Responsibility', 'Impact Management', 'ESG Audit'],
+  authors: [{ name: 'CSR Flow Team' }],
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'),
 };
 

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useAuth } from '@/lib/firebase/auth-context';
 import { Eye, EyeOff, Loader2, Mail, Lock, User, Chrome } from 'lucide-react';
 
+import Image from 'next/image';
+
 export default function LoginPage() {
   const { signIn, signUp, signInWithGoogle, isDemo } = useAuth();
   const [isSignUp, setIsSignUp] = useState(false);
@@ -95,13 +97,22 @@ export default function LoginPage() {
 
   return (
     <div className="w-full max-w-md">
-      {/* Logo / Brand */}
+      {/* Brand Header with Logo */}
       <div className="mb-8 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-700 rounded-lg mb-4 shadow-lg shadow-brand-700/25">
-          <span className="text-white font-bold text-xl">C</span>
+        <div className="inline-flex items-center justify-center relative w-16 h-16 mb-3">
+          <Image
+            src="/logo.png"
+            alt="CSR Flow Logo"
+            width={64}
+            height={64}
+            className="object-contain"
+            priority
+          />
         </div>
-        <h1 className="text-2xl font-bold text-slate-900 tracking-tight">CSR360</h1>
-        <p className="text-sm text-slate-500 mt-1">One Project. One Source of Truth.</p>
+        <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">CSR Flow</h1>
+        <p className="text-xs font-semibold text-emerald-700 uppercase tracking-widest mt-1">
+          Plan • Track • Impact
+        </p>
       </div>
 
       {/* Login / Sign Up Card */}
@@ -113,7 +124,7 @@ export default function LoginPage() {
           <p className="text-sm text-slate-500 mt-0.5">
             {isSignUp
               ? 'Register to start managing CSR projects.'
-              : 'Enter your credentials to access the CSR360 platform.'}
+              : 'Enter your credentials to access the CSR Flow enterprise platform.'}
           </p>
         </div>
 
@@ -285,7 +296,7 @@ export default function LoginPage() {
       </div>
 
       <p className="mt-6 text-center text-xs text-slate-400">
-        CSR360 &copy; {new Date().getFullYear()} &mdash; Enterprise CSR Management Platform
+        CSR Flow &copy; {new Date().getFullYear()} &mdash; Plan • Track • Impact
       </p>
     </div>
   );

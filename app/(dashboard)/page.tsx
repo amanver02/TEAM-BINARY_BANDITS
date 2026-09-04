@@ -88,7 +88,7 @@ export default function DashboardHomePage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight">CSR360 Overview</h1>
+          <h1 className="text-xl font-bold text-slate-900 tracking-tight">CSR Flow Overview</h1>
           <p className="text-xs text-slate-500 mt-0.5">
             Enterprise Social Responsibility & Impact Dashboard
           </p>

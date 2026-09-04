@@ -1,5 +1,5 @@
 -- ============================================================
--- CSR360 — Supabase PostgreSQL Schema
+-- CSR Flow — Supabase PostgreSQL Schema
 -- Run this in the Supabase SQL editor
 -- ============================================================
 

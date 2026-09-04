@@ -68,7 +68,7 @@ ${reports.map((r) => `- ${r.title} (Submitted: ${r.created_at.slice(0, 10)})`).j
 `;
 
     const prompt = `
-You are CSR360 AI, an enterprise assistant for Corporate Social Responsibility auditing.
+You are CSR Flow AI, an enterprise assistant for Corporate Social Responsibility auditing.
 Answer the user's question using ONLY the provided Project Record context below.
 
 CRITICAL INSTRUCTIONS:

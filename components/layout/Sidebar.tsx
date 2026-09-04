@@ -2,12 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import {
   LayoutDashboard,
   FolderKanban,
   Users,
   BarChart3,
   Lightbulb,
+  FileText,
   Settings,
   ChevronRight,
 } from 'lucide-react';
@@ -24,6 +26,11 @@ const navItems = [
     label: 'Projects',
     href: '/projects',
     icon: FolderKanban,
+  },
+  {
+    label: 'Documents',
+    href: '/documents',
+    icon: FileText,
   },
   {
     label: 'Partners',
@@ -59,15 +66,24 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="w-60 shrink-0 flex flex-col bg-white border-r border-slate-200 h-full">
-      {/* Brand */}
-      <div className="flex items-center gap-2.5 px-4 h-14 border-b border-slate-200">
-        <div className="flex items-center justify-center w-8 h-8 bg-brand-700 rounded-md">
-          <span className="text-white font-bold text-sm">C</span>
+    <aside className="w-64 shrink-0 flex flex-col bg-white border-r border-slate-200 h-full">
+      {/* Brand Header */}
+      <div className="flex items-center gap-3 px-4 h-16 border-b border-slate-200 bg-slate-50/50">
+        <div className="relative w-10 h-10 shrink-0">
+          <Image
+            src="/logo.png"
+            alt="CSR Flow Logo"
+            width={40}
+            height={40}
+            className="object-contain"
+            priority
+          />
         </div>
-        <div>
-          <p className="text-sm font-bold text-slate-900 leading-none">CSR360</p>
-          <p className="text-[10px] text-slate-400 leading-none mt-0.5">Enterprise Platform</p>
+        <div className="overflow-hidden">
+          <p className="text-base font-bold text-slate-900 leading-none tracking-tight">CSR Flow</p>
+          <p className="text-[10px] font-semibold text-emerald-700 leading-none mt-1 tracking-wider uppercase">
+            Plan • Track • Impact
+          </p>
         </div>
       </div>
 
