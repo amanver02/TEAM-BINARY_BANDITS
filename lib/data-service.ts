@@ -359,16 +359,18 @@ export async function createProject(input: CreateProjectInput): Promise<Project>
       const supabase = createServerClient();
       const { data, error } = await supabase.from('projects').insert({
         title: input.title,
-        description: input.description,
+        description: input.description || null,
         status: input.status,
         category: input.category,
         start_date: input.start_date,
-        end_date: input.end_date,
+        end_date: input.end_date || null,
         total_budget: input.total_budget,
-        partner_id: input.partner_id,
+        partner_id: input.partner_id || null,
       }).select().single();
 
-      if (!error && data) {
+      if (error) {
+        console.error('[DataService] Supabase createProject error:', error);
+      } else if (data) {
         return data as Project;
       }
     } catch (err) {

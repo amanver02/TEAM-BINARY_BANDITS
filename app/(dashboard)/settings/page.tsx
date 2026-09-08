@@ -31,7 +31,7 @@ export default function SettingsPage() {
     <div className="space-y-6 max-w-4xl">
       {/* Header */}
       <div>
-        <h1 className="text-xl font-bold text-slate-900 tracking-tight">Platform Settings</h1>
+        <h1 className="text-xl font-bold text-slate-900 tracking-tight"> shahbaz Settings</h1>
         <p className="text-xs text-slate-500 mt-0.5">
           User profile, integration status, and demo dataset manager
         </p>

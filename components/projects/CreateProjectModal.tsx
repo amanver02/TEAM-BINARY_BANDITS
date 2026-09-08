@@ -58,10 +58,16 @@ export default function CreateProjectModal({
         }),
       });
 
-      if (!res.ok) {
-        throw new Error('Failed to create project.');
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        throw new Error(data.error || 'Failed to create project.');
       }
 
+      setTitle('');
+      setDescription('');
+      setTotalBudget('');
+      setStartDate('');
+      setEndDate('');
       onSuccess();
       onClose();
     } catch (err: unknown) {
